@@ -1,3 +1,5 @@
+// Copyright 2014 Mahmud Ridwan
+// Copyright 2019 Lassi Kortela
 // SPDX-License-Identifier: BSD-2-Clause
 
 package httplog
