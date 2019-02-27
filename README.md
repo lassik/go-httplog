@@ -9,7 +9,7 @@ your own logger. Use the parts you like and ignore the rest.
 * It's based around a `LogRequest` struct that contains parsed info
   about a HTTP request.
 * The `LogHandler` middleware lets you log any HTTP request. You give
-  it a function that gets a `LogHandler`. The function can format and
+  it a function that gets a `LogRequest`. The function can format and
   write log entries any way it likes.
 * To format log entries, you can use the `CommonLogLine` or
   `CombinedLogLine` function. It's also easy to roll your own
