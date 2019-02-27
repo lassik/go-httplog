@@ -17,10 +17,10 @@ your own logger. Use the parts you like and ignore the rest.
 
 The hard parts of this library were extracted from the [Gorilla
 Handlers](https://github.com/gorilla/handlers) package. Credit for
-them goes to Michael Lee Squires. I just added the composable
-framework around them. The Gorilla libraries are great, but at the
-time of writing they impose some restrictions that make it hard to do
-fancy stuff like log into multiple places and use custom formats. This
+them goes to Mahmud Ridwan. I just added the composable framework
+around them. The Gorilla libraries are great, but at the time of
+writing they impose some restrictions that make it hard to do fancy
+stuff like log into multiple places and use custom formats. This
 logging library is also framework-agnostic and doesn't depend on
 Gorilla or anything else outside the Go standard libraries.
 
