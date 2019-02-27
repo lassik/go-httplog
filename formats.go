@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-// Return a log entry in Apache Common Log Format (CLF).
+// CommonLogLine returns a log entry in Apache Common Log Format (CLF).
 //
 // See http://httpd.apache.org/docs/2.2/logs.html#common
 //
@@ -31,7 +31,7 @@ func CommonLogLine(r LogRequest) []byte {
 	return buf
 }
 
-// Return a log entry in Apache Combined Log Format.
+// CombinedLogLine returns a log entry in Apache Combined Log Format.
 //
 // See http://httpd.apache.org/docs/2.2/logs.html#combined
 //

@@ -7,17 +7,22 @@ import (
 	"time"
 )
 
+// Logger is any user-supplied function to process one LogRequest.
 type Logger func(r LogRequest)
 
-// LogHandler is a http.Handler wrapper that calls a user-defined
-// logger function after each request. The logger function can call
-// the utility functions in this package to help produce its log
-// message.
 type logHandler struct {
 	handler http.Handler
 	logger  Logger
 }
 
+// LogHandler makes a http.Handler (middleware for the Go HTTP
+// server). For each HTTP request, it calls the user-supplied handler.
+// At the end of the request, it additionally calls the user-supplied
+// logger to log the request.
+//
+// The logger gets a LogRequest. Usually you'll want to call one of
+// the log formatting functions in this package or roll your own log
+// formatter. Then write the resulting log entry somewhere.
 func LogHandler(handler http.Handler, logger Logger) logHandler {
 	return logHandler{handler, logger}
 }
